@@ -39,13 +39,10 @@ function Form() {
       </div>
       
       <div className="form">
-        <label>
+        <div className="weight-value"><label>
           Weight (kg):
           <input className="put-value" type="number" value={weight} onChange={handleWeightChange} />
-        </label>
-       
-        <br/>
-        <br/>
+        </label></div>
         
         <label>
           Height (m):
@@ -54,7 +51,7 @@ function Form() {
         
        
         <button class="btn" onClick={calculateBmi}>submit</button>
-      </div>
+      
      
       {bmi && (
         <div className="result">
@@ -62,6 +59,7 @@ function Form() {
           <p>{bmi < 18.5 ? "Underweight" : bmi < 25 ? "Normal" : "Overweight"}</p>
         </div>
       )}
+      </div>
     </div>
   );
 }
